@@ -1,0 +1,42 @@
+h1, .h1{
+	font-size: 32px;
+	margin: 22px 0;
+	font-weight: bold;
+}
+
+h2, .h2{
+	color: #777;
+	font-size: 24px;
+	margin: 20px 0;
+	font-weight: bold;
+}
+
+h3, .h3{
+	font-size: 18px;
+	margin: 16px 0;
+	font-weight: bold;
+}
+
+/* #main{
+	border: 1px solid red;
+	padding: 10px;
+} */
+
+.underline{
+	border-bottom: 1px solid red;
+	padding-bottom: 3px;
+}
+
+.blogitem{
+	border: 1px solid #f90;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.blogitem h3{
+	color: red;
+}
+
+.blogitem p{
+	font-style: italic;
+}

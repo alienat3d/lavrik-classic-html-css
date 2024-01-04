@@ -1,0 +1,51 @@
+
+
+
+<!-- <body>
+	<header>
+		logo
+		<nav></nav>
+	</header>
+	<main>
+		<article>
+			<h1>q</h1>
+			<section>
+				<h2>1</h2>
+				<div>1</div>
+			</section>
+			<section>
+				<h2>3</h2>
+				<div>N....</div>
+			</section>
+		</article>
+	</main>
+	<aside>
+
+	</aside>
+	<footer></footer>
+</body> -->
+<!-- 
+<h1>Home page</h1>
+<div>
+	<h2>Article about some</h2>
+	<div>
+		<h3>First section</h3>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo quis incidunt eaque non nesciunt debitis ut adipisci explicabo optio veniam, veritatis pariatur earum eos fugiat maxime atque. Voluptas, eaque amet.</p>
+		<p>Lorem</p>
+		<p>Lorem</p>
+	</div>
+	<div>
+		<h3>Second section</h3>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo quis incidunt eaque non nesciunt debitis ut adipisci explicabo optio veniam, veritatis pariatur earum eos fugiat maxime atque. Voluptas, eaque amet.</p>
+		<p>Lorem</p>
+		<p>Lorem</p>
+	</div>
+</div> -->
+
+
+	<!-- <h1>1</h1>
+	<h2>1</h2>
+	<h3>1</h3>
+	<h4>1</h4>
+	<h5>1</h5>
+	<h6>1</h6> -->
