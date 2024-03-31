@@ -1,0 +1,129 @@
+/* базовые стили... */
+h1, .h1, h2, .h2, h3, .h3{
+	font-weight: bold;
+}
+
+h1, .h1{
+	font-size: 32px;
+	margin: 22px 0;
+}
+
+h2, .h2{
+	font-size: 26px;
+	margin: 18px 0;
+}
+
+h3, .h3{
+	font-size: 20px;
+	margin: 16px 0;
+}
+
+/* * контекстные — все li на любом уровне вложенности внутри "catalog" */
+.catalog li{
+	margin: 5px 0;
+}
+
+/* * дочерние — только вложенные li в "catalog" на первом уровне вложенности */
+.catalog > li{
+	border-left: 1px solid red;
+}
+
+.catalog ul li{
+	font-size: 14px;
+}
+/* * Уточняющие селекторы */
+/* Когда мы пишем слитно, то указываем браузеру, что стили нужно применять только при нахождении обеих частей селектора, т.е. элемент с классом "active" должен быть тегом <a>, тогда он окрасится в красный... */
+a.active{
+	color: red;
+}
+/* ... либо элемент с классом "active" должен быть тегом <h2> и только тогда он окрасится в золотистый цвет. */
+h2.active{
+	color: #f90;
+}
+/*
+	.menu{}
+	.menu li{}
+	.menu li.active{}
+*/
+/* * следующий тег за... — применится непосредственно к одному параграфу, который идёт за тегом <h2> в вёрстке. */
+/* unusable */
+/* h2 + p{
+	font-style: italic;
+} */
+/* * Ищет всех соседей h2 снизу. */
+/*  
+h2 ~ p{
+	font-style: italic;
+}*/
+/* * Селектор атрибута (ищет по атрибуту "name" со значением "for-menu") */
+/* input[name="for-menu"]{
+	// alternative .menuToggle
+} */
+
+/* + , ~ */
+.menu{
+	transition: opacity 0.5s;
+	opacity: 0;
+	background-color: #aaa;
+	position: absolute;
+	width: 300px;
+	padding: 20px 20px 20px 50px;
+}
+
+.menuToggle{
+	display: none;
+}
+
+.menuToggle:checked + .menu{
+	display: block;
+	opacity: 1;
+}
+
+a{
+	text-decoration: none;
+	color: #00f;
+}
+
+a:visited{
+	color: #50f;
+}
+
+a:hover{
+	color: #ff0;
+}
+
+a:active{
+	color: #0f0;
+}
+
+.btn{
+	display: inline-block;
+	padding: 10px 20px;
+	background: #777;
+	color: #fff; 
+	cursor: pointer;
+	transition: color 0.5s;
+}
+
+.btn:active{
+	box-shadow: 5px 5px 5px #222 inset;
+}
+
+.btn:hover{
+	color: #ff0; 
+}
+
+/* li:before{
+	content: '->';
+} */
+/* * Такие вещи, как индикация распродажи логичнее будет указывать через псевдоэлемент, т.к. в вёрстке нам оно особенно не нужно, плюс, если там был бы какой-то значок, то прописанный в CSS он загрузится лишь 1 раз и кэшируется, а значит чуточку сэкономит время загрузки. */
+.sale:after{
+	content: 'sale';
+	display: inline-block; /* Чтобы задать вертикальные отступы. */
+	margin-left: 3px;
+	padding: 3px;
+	background: #00f;
+	border-radius: 30%;
+	color: #fff;
+	font-size: 11px;
+}
