@@ -1,0 +1,28 @@
+.menu{
+	width: 200px;
+	list-style: none;
+	background-color: #ccc;
+	padding: 5px 10px;
+	text-align: center;
+}
+
+.menu li{
+	border-top: 1px solid #fff;
+}
+
+.menu li:first-child{
+	border-top: none;
+}
+
+.menu a{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	padding: 5px 0;
+	transition: background-color 0.5s, color 0.5s;
+}
+
+.menu a:hover{
+	background: #222;
+	color: #fff;
+}

@@ -1,0 +1,15 @@
+body{
+	margin: 0;
+}
+
+header{
+	background-color: lightblue;
+	min-height: 100px;
+}
+
+main{
+	background-color: #eee;
+	/* border: 1px solid transparent; */
+	/* padding: 1px 0px; */
+	overflow: hidden;
+}
