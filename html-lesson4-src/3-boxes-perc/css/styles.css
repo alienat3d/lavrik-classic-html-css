@@ -1,0 +1,39 @@
+body{
+	margin: 10px;
+}
+
+.box{
+	max-width: 900px;
+	margin: 0 auto;
+	background: steelblue;
+	padding: 5px;
+	font-size: 0; /* в flex этого кошмара не будет */
+}
+
+.boxItem{
+	background-color: moccasin;
+	width: calc(25% - 10px);
+	display: inline-block;
+	font-size: 16px; /* в flex этого кошмара не будет */
+	margin: 5px;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 8px;
+	border: 3px solid #fff;
+}
+
+/*
+ default
+ realWidth: width + marginLeft + marginRight + 
+ 				paddingLeft + paddingRight + borderRight + borderLeft
+
+ box-sizing: border-box
+ realWidth: width + marginLeft + marginRight
+*/
+
+/*
+	margin: 5px; - 5px every
+	margin: 5px 10px; - 5px vertical, 10px horizontal
+	margin: 5px 10px 15px; - 5px top, 10px horizontal, 15 - bottom
+	margin: 5px 10px 15px 20px; - top, right, bottom, left
+*/

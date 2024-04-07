@@ -1,0 +1,138 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	margin: 2% auto;
+	text-align: center;
+	max-width: 90%;
+}
+
+.title {
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+.title span {
+	display: block;
+}
+
+.navigation__btn {
+	cursor: pointer;
+	user-select: none;
+	display: inline-block;
+	margin-bottom: 15px;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: rebeccapurple;
+	font-size: 25px;
+	color: white;
+	transition: background-color .3s;
+}
+
+.navigation__checkbox {
+	display: none;
+}
+.navigation__checkbox:checked + .navigation__btn {
+	background-color: green;
+}
+.navigation__checkbox:checked ~ .navigation__list .card__image {
+	display: none;
+}
+.navigation__checkbox:checked ~ .navigation__list .navigation__list-item,
+.navigation__checkbox:checked ~ .navigation__list .card {
+	display: block;
+}
+
+.navigation__list {
+	font-size: 0;
+	/* removes extra space between inline-block child elements */
+}
+
+.navigation__list-item {
+	display: inline-block;
+	padding: 5px;
+}
+
+.card {
+	display: inline-block;
+	border-radius: 15px;
+	padding: 10px 10px 20px;
+	max-width: 500px;
+	background-color: #273de4;
+}
+
+.card:hover .card__link::before,
+.card:hover .card__link::after {
+	overflow: visible;
+	opacity: 1;
+}
+
+.card__link {
+	position: relative;
+	margin: 20px 50px;
+	padding-top: 15px;
+	display: inline-block;
+	font-size: 30px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.card__link::before,
+.card__link::after {
+	content: '';
+	position: absolute;
+	overflow: hidden;
+	opacity: 0;
+	top: 12px;
+	left: -80px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 15px 26.0px 15px 0;
+	border-color: transparent #FFF transparent transparent;
+	transition: overflow .3s, opacity .3s, rotate .3s, translate .3s;
+}
+
+.card__link::after {
+	left: initial;
+	right: -80px;
+	border-width: 15px 0 15px 26.0px;
+	border-color: transparent transparent transparent #FFF;
+}
+
+.card__link:hover.card__link::before,
+.card__link:hover.card__link::after {
+	transition: rotate .7s, translate .5s;
+}
+
+.card__link:hover.card__link::before {
+	rotate: 180deg;
+	translate: 20px;
+}
+
+.card__link:hover.card__link::after {
+	rotate: -180deg;
+	translate: -20px;
+}
+
+.card__link:active {
+	color: goldenrod;
+	transition: color .1s;
+}
+
+.card__link:active.card__link::before,
+.card__link:active.card__link::after {
+	overflow: hidden;
+	opacity: 0;
+	transition: overflow .1s, opacity .1s, translate .05s;
+}
+
+.card__link:active.card__link::before {
+	translate: 35px;
+}
+
+.card__link:active.card__link::after {
+	translate: -35px;
+}

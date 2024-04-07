@@ -1,0 +1,48 @@
+body{
+	margin: 10px;
+}
+
+.box{
+	max-width: 1280px;
+	margin: 0 auto;
+	background: steelblue;
+	padding: 5px;
+	font-size: 0; /* в flex этого кошмара не будет */
+}
+
+.boxItem{
+	background-color: moccasin;
+	width: calc(25% - 10px);
+	display: inline-block;
+	font-size: 16px; /* в flex этого кошмара не будет */
+	margin: 5px;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 8px;
+	border: 3px solid #fff;
+}
+
+@media screen and (max-width: 700px){
+	.boxItem{
+		width: calc(100% / 3 - 10px);
+	}
+}
+
+@media screen and (max-width: 550px){
+	.boxItem{
+		width: calc(100% / 2 - 10px);
+	}
+}
+
+@media screen and (max-width: 400px){
+	.boxItem{
+		width: calc(100% - 10px);
+	}
+}
+
+
+
+/* calc(100% / N - m*2) */
+
+@media screen and (max-width: 600px){ /* страница не превышает 600px по ширине */ }
+@media screen and (min-width: 800px){ /* страница не ментше, чем 800px по ширине */ }
