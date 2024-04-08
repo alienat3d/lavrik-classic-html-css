@@ -1,0 +1,173 @@
+body{
+	margin: 0;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.container{
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.header{
+	background-color: tan;
+}
+
+.topnav{
+	background-color: teal;
+}
+
+.topmenu{
+	list-style: none;
+	padding: 10px 0;
+	font-size: 0;
+	margin: 0 -10px;
+}
+
+.topmenu li{
+	display: inline-block;
+	margin: 0 10px;
+	font-size: 16px;
+}
+
+.topmenu a{
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	background-color: #ccc;
+	padding: 5px 10px;
+}
+
+.aside, .main{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.aside{
+	background-color: tan;
+	width: 150px;
+}
+
+.main{
+	box-sizing: border-box;
+	background-color: #4cc881;
+	width: calc(100% - 150px);
+	padding: 1px 15px;
+}
+
+.footer{
+	background-color: teal;
+}
+
+.catalog{
+	font-size: 0;
+	margin: 0 -10px;
+}
+
+.catalogItem{
+	font-size: 16px;
+	box-sizing: border-box;
+	margin: 10px;
+	background: #4270f0;
+	width: calc(100% / 4 - 20px);
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.catalogItem__image{
+	display: block;
+	margin-bottom: 10px;
+}
+
+.catalogItem__link{
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.catalogItem__link::before, .catalogItem__link::after{
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	opacity: 0;
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.catalogItem__link::before{
+	border-right: 16px solid #fff;
+	transform: translateX(-20px);
+}
+
+.catalogItem__link::after{
+	border-left: 16px solid #fff;
+	transform: translateX(20px);
+}
+
+.catalogItem:hover .catalogItem__link::before, .catalogItem:hover .catalogItem__link::after{
+	opacity: 1;
+}
+
+.catalogItem__link:hover::before{
+	transform: translateX(-5px) rotate(180deg);
+}
+
+.catalogItem__link:hover::after{
+	transform: translateX(5px) rotate(-180deg);
+}
+
+@media screen and (max-width: 1100px){
+	.catalogItem{
+		width: calc(100% / 3 - 20px);
+	}
+}
+
+@media screen and (max-width: 800px){
+	.container{
+		padding: 0 15px;
+	}
+
+	.aside{
+		display: none;
+	}
+
+	.main{
+		width: 100%;
+	}	
+}
+
+
+@media screen and (max-width: 700px){
+	.catalogItem{
+		width: calc(100% / 2 - 20px);
+	}
+}
+
+
+@media screen and (max-width: 500px){
+	.topmenu li{
+		display: block;
+		margin: 10px;
+	}
+
+	.topmenu a{
+		display: block;
+	}
+
+	.catalogItem{
+		width: calc(100% - 20px);
+	}
+
+	.catalogItem__image{
+		display: none;
+	}
+}
