@@ -1,0 +1,120 @@
+.headerSection {
+	background: url(../img/header.jpg) no-repeat center;
+	text-align: center;
+}
+
+.headerTexts {
+	margin: 20% 0;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.headerSection h1 {
+	margin-top: 0;
+}
+
+.headerSection .h2 {
+	margin-bottom: 5rem;
+}
+
+.sectionTeam {
+	text-align: center;
+}
+
+.teamItem {
+	width: calc(100% / 3 - var(--offset) * 2);
+	margin-top: 30px;
+}
+
+.teamItem .h3 {
+	color: var(--green);
+}
+
+.sectionAdv,
+.sectionTeam {
+	padding: 3rem 0;
+}
+
+.advItem {
+	width: calc(100% / 2 - var(--offset) * 2);
+	display: flex;
+	margin-top: 35px;
+}
+
+.advItem .title {
+	color: var(--green);
+	margin-top: 0;
+}
+
+.advRange {
+	width: 131px;
+	height: 131px;
+	background-color: var(--green);
+	border-radius: 50%;
+	text-align: center;
+	line-height: 131px;
+	margin-right: 20px;
+}
+
+.advTexts {
+	width: calc(100% - 151px);
+}
+
+/* .advTexts .text{
+	font-size: 1.25em;
+} */
+
+.advRange img {
+	vertical-align: middle;
+}
+
+/* Если вдруг нам дали задачу, что в галерее расстояние между картинками должно быть 2px, то мы это можем сделать таким вот образом, указав для этого блока переменной "offset" — "2px". */
+.gallery {
+	--offset: 2px;
+}
+
+.galleryItem {
+	width: calc(100% / 3 - var(--offset) * 2);
+}
+
+.galleryItem img {
+	display: block;
+}
+
+@media screen and (max-width: 992px) {
+	.advItem {
+		width: calc(100% / 1 - var(--offset) * 2);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.team {
+		justify-content: center;
+	}
+
+	.teamItem {
+		width: calc(100% / 1 - var(--offset) * 2);
+		max-width: 370px;
+	}
+
+	.galleryItem {
+		width: calc(100% / 2 - var(--offset) * 2);
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.advItem {
+		display: block;
+	}
+
+	.advTexts {
+		width: auto;
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.galleryItem {
+		width: calc(100% / 1 - var(--offset) * 2);
+	}
+}
