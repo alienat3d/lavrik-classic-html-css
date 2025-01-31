@@ -84,5 +84,3 @@ let dev = gulp.series(buildWithClean, watch)
 
 gulp.task('build', buildWithClean)
 gulp.task('watch', dev)
-
-gulp.task('html', html)

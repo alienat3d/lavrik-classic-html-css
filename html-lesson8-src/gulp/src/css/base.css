@@ -1,77 +1,88 @@
-:root{
+:root {
 	--green: #1D9D73;
 	--offset: 15px;
 }
 
-html{
-	font-size: 10px; /* base multiplication value */
+html {
+	font-size: 10px;
+	/* base multiplication value */
 }
 
-body{
+body {
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
 	color: #888;
 	font-size: 16px;
 }
 
-h1,h2,h3,.h1,.h2,.h3{
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
 	font-weight: 300;
 	color: #333;
 }
 
-h1, .h1{
+h1,
+.h1 {
 	font-size: 5.5rem;
 	margin: 3rem 0;
 }
 
-h2, .h2{
+h2,
+.h2 {
 	font-size: 35px;
 	margin: 20px 0;
 }
 
-h3, .h3{
+h3,
+.h3 {
 	font-size: 26px;
 	margin: 16px 0;
 }
 
-strong, .strong{
+strong,
+.strong {
 	font-weight: 400;
 }
 
-em, .em{
+em,
+.em {
 	font-weight: 300;
 	font-style: italic;
 }
 
-p{
+p {
 	font-weight: 300;
 	margin: 0 16px;
 }
 
 /* etc */
-.content-text ul{
+.content-text ul {
 	list-style-type: disc;
 	padding-left: 50px;
 }
 
-.container{
+.container {
 	max-width: 1170px;
 	padding: 10px 30px;
 	margin: 0 auto;
 }
 
-.row{
+.row {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 calc(var(--offset) * -1);
 }
 
-.col{
+.col {
 	margin: var(--offset);
 	box-sizing: border-box;
 }
 
-.btn{
+.btn {
 	display: inline-block;
 	padding: 10px 20px;
 	cursor: pointer;
@@ -79,26 +90,25 @@ p{
 	border-radius: 10px;
 }
 
-.btn-green{
+.btn-green {
 	background: var(--green);
 	color: #fff;
 }
 
-@media screen and (max-width: 768px){
-	html{
+@media screen and (max-width: 768px) {
+	html {
 		font-size: 7px;
 	}
 }
 
-@media screen and (max-width: 560px){
-	.container{
+@media screen and (max-width: 560px) {
+	.container {
 		padding: 10px var(--offset);
 	}
 }
 
-@media screen and (max-width: 400px){
-	:root{
+@media screen and (max-width: 400px) {
+	:root {
 		--offset: 8px;
 	}
 }
-
